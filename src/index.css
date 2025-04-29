@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 99%;
+    --foreground: 35 25% 15%;
+
+    --card: 30 25% 97%;
+    --card-foreground: 35 25% 15%;
+
+    --popover: 30 33% 99%;
+    --popover-foreground: 35 25% 15%;
+
+    --primary: 43 100% 45%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 35 25% 15%;
+
+    --muted: 35 25% 92%;
+    --muted-foreground: 35 10% 50%;
+
+    --accent: 35 91% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 43 100% 45%;
+
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground font-montserrat;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-playfair text-3xl md:text-4xl font-bold mb-6 relative;
+  }
+  .section-title:after {
+    content: "";
+    @apply block h-1 w-20 bg-gold-400 mt-2;
+  }
+  .container-custom {
+    @apply container mx-auto px-4 md:px-6;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-gold-100 shadow-lg;
+  }
+  .glass-nav {
+    @apply backdrop-blur-lg bg-white/80 border-b border-gold-100;
+  }
+}
